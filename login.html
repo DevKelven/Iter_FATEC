@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" type="imagex/png" href="./image/LOGO.png">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section class="login-container">
+
+        <img class="logologin" src="image/logo.svg" alt="logo">
+
+            <h1>Acesso ao Sistema</h1>
+            <form id="loginForm" action="login.php" method="POST">
+                <label for="userType">Tipo de Usuário</label>
+                <select id="userType" name="userType" required>
+                    <option value="adm">Administrador</option>
+                    <option value="aluno">Aluno</option>
+                </select>
+
+                <label for="ra">Usuário</label>
+                <input type="text" id="ra" name="ra" required>
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" name="submit">Entrar</button>
+            </form>
+
+            <!-- Botão para redirecionar à página de cadastro -->
+            <div class="register-link">
+                <p>Não tem uma conta?</p>
+                <button><a href="cadastro.php">Cadastrar-se</a></button>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
